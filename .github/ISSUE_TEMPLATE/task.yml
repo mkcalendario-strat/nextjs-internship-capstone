@@ -2,7 +2,8 @@ name: Capstone Task
 description: Template for structured task tracking during development of the capstone
 title: "Task: [Phase] - [Feature Name]"
 projects: ['mkcalendario-strat/1']
-assignee: ['mkcalendario-strat']
+assignees: 
+  - 'mkcalendario-strat'
 labels:
   - enhancement
 body:
