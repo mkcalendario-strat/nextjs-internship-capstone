@@ -1,0 +1,90 @@
+name: Capstone Task
+description: Template for structured task tracking during development of the capstone
+title: "Task: [Phase] - [Feature Name]"
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: input
+    id: estimated_time
+    attributes:
+      label: Estimated Time
+      description: Time estimated to complete the task (e.g. 4 hours)
+      placeholder: "e.g. 4 hours"
+    validations:
+      required: true
+
+  - type: input
+    id: week
+    attributes:
+      label: Week
+      description: Development week this task is assigned to
+      placeholder: "Week X"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Frontend
+        - Backend
+        - Database
+        - Testing
+        - Setup
+        - Authentication
+        - Deployment
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clear description of what needs to be implemented.
+      placeholder: Describe the task clearly
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Write custom, measurable criteria using `- [ ]` for checkboxes (Markdown)
+      placeholder: |
+        - [ ] User can do X  
+        - [ ] Validation errors are shown  
+        - [ ] Passes all automated tests  
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation_notes
+    attributes:
+      label: Implementation Notes
+      description: Notes on technical approach, dependencies, or references
+      placeholder: Include architecture decisions, dependencies, useful links
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      options:
+        - label: Code written and working locally
+        - label: Self-reviewed for quality and best practices
+        - label: Tests written (if applicable)
+        - label: Documentation updated
+        - label: Feature deployed and tested
+        - label: Ready for optional peer review
